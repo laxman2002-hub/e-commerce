@@ -1,4 +1,5 @@
 import "./App.css";
+import "./assets/bootstrap/css/bootstrap.min.css"
 import { createBrowserRouter } from "react-router-dom";
 import { createRoutesFromElements } from "react-router-dom";
 import { Route } from "react-router-dom";
@@ -14,6 +15,7 @@ import AuthProvider, { useAuth } from "./firebase/Auth";
 import { Navigate } from "react-router-dom";
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
+import TablePage from "./components/TablePage";
 
 function ProtectedRoute({ children }) {
   const { user } = useAuth();
@@ -38,10 +40,10 @@ const router = createBrowserRouter(
             </ProtectedRoute>
           }
         />
+      <Route path="/admin" index element={<TablePage />} />
       </Route>
       <Route path="/login" index element={<Login />} />
       <Route path="/register" index element={<Register />} />
-      <Route path="/admin" index element={<Admin />} />
     </>
   )
 ); 
