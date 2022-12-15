@@ -14,8 +14,7 @@ import Checkout from "./pages/Checkout";
 import AuthProvider, { useAuth } from "./firebase/Auth";
 import { Navigate } from "react-router-dom";
 import Register from "./pages/Register";
-import Admin from "./pages/Admin";
-import TablePage from "./components/TablePage";
+import TablePage from "./pages/TablePage";
 
 function ProtectedRoute({ children }) {
   const { user } = useAuth();
@@ -40,8 +39,8 @@ const router = createBrowserRouter(
             </ProtectedRoute>
           }
         />
-      <Route path="/admin" index element={<TablePage />} />
-      </Route>
+        </Route>
+        <Route path="/admin" index element={<TablePage />} />
       <Route path="/login" index element={<Login />} />
       <Route path="/register" index element={<Register />} />
     </>

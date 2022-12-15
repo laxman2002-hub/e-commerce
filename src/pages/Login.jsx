@@ -22,13 +22,14 @@ export default function Login() {
     const { email, password } = event.target;
     try{
       const pass = await signIn(email.value, password.value);
-      alert("Login successfully");
+      
       console.log(pass);
       if(pass.email=="saini.laxman2002@gmail.com"){
-        console.log("HI i am an admin");
+        alert("You Login as an Admin successfully");
         navigate("/admin");
       }
       else{
+        alert("Login successfully");
       navigate("/");
       }
       }
