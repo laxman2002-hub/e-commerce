@@ -19,8 +19,8 @@ import { createContext } from "react";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCmdKRTiMbG4GfBfJKQXP22Gi_7iR78GxQ",
-  authDomain: "ecommerce-ed61a.firebaseapp.com",
+  apiKey: "Your API Key",
+  authDomain: "You app auth Domain",
   projectId: "ecommerce-ed61a",
   storageBucket: "ecommerce-ed61a.appspot.com",
   messagingSenderId: "1064018740422",
